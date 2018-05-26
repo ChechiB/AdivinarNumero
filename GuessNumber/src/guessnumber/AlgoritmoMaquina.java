@@ -21,19 +21,19 @@ public class AlgoritmoMaquina implements AlgoritmoAdivinar {
         int numeroRandom = (int)(Math.random()*100);
         
         for (int i = 0; i <intentos; i++){
-            System.out.println("Elija un numero del 1 al 100");
+            System.out.println(">Ingrese un numero del 1 al 100");
             entrada.datoEntrada();
             opcion =entrada.getEntrada();
             if(validacionNumero.esValido(opcion)){
                 numeroIngresado = Integer.parseInt(opcion);
             
                 if(numeroIngresado == numeroRandom){
-                    System.out.println("Has acertado, felicitaciones!");
+                    System.out.println(">Has acertado, felicitaciones!");
                     break;
                 } else if (numeroIngresado < numeroRandom){
-                    System.out.println("Mi numero es mayor que el ingresado");
+                    System.out.println(">Mi numero es mayor que el ingresado");
                 } else{
-                    System.out.println("Mi numero es menor que el ingresado");
+                    System.out.println(">Mi numero es menor que el ingresado");
 
                 }
 

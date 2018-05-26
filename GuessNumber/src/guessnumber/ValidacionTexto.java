@@ -23,7 +23,7 @@ public class ValidacionTexto implements Validacion {
 
     @Override
     public String getMensaje() {
-        return "El nombre no puede estar vacio y debe tener menos de ocho caracteres";
+        return ">El nombre no puede estar vacio";
     }
     
 }

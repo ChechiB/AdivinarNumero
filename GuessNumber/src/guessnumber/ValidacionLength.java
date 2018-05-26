@@ -25,7 +25,7 @@ public class ValidacionLength implements Validacion{
 
     @Override
     public String getMensaje() {
-        return ("La cadena debe ser menor a " + (cadenaLength-1) + " caracteres");
+        return (">La cadena debe ser menor a " + (cadenaLength-1) + " caracteres");
     }
 
     private int getLength() {

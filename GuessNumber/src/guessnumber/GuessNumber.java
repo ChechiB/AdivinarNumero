@@ -30,25 +30,21 @@ public class GuessNumber {
         String mensaje;
         
         do{
-            System.out.println("Ingrese su nombre: ");
+            System.out.println(">Ingrese su nombre: ");
             entrada.datoEntrada();
             nombre =entrada.getEntrada();
-            String nasd = null;
             if(validacionTexto.esValido(nombre)&& validacionLength.esValido(nombre) ){
-                mensaje= String.format("Bienvenido %s ", nombre);
-              
-                    System.out.println(mensaje + "\n Ingresa \"1\" para adivinar el numero o \"2\" para ");
-                    entrada.datoEntrada();
-                    opcion = entrada.getEntrada();
-                    if (validacionNumero.esValido(opcion)){
-                        if("1".equals(opcion)){
-                            persona.adivinarNumero();                  
-                        }else if ("2".equals(opcion)){
-                            System.out.println("Dos");
-                            maquina.adivinarNumero();
-                        }
+                mensaje= String.format(">Bienvenido %s ", nombre);
+                System.out.println(mensaje + "\n Ingresa \"1\" para adivinarle el numero a Samus o \"2\" para que Samus adivine su numero.");
+                entrada.datoEntrada();
+                opcion = entrada.getEntrada();
+                    
+                    if("1".equals(opcion)){
+                        maquina.adivinarNumero();                  
+                    }else if ("2".equals(opcion)){
+                        persona.adivinarNumero();
                     }else{
-                    System.out.println(validacionNumero.getMensaje());
+                            System.out.println(validacionNumero.getMensaje());
                     } 
             }else{
                 System.out.println(validacionTexto.getMensaje());
